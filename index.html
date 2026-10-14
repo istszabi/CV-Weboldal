@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="abstract" content="Istok Szabolcs | Professional Resume | Curriculum Vitae | CV" />
+    <meta name="description"
+        content="Istók Szabolcs - Informatika hallgató és szoftverfejlesztő önéletrajza és portfóliója." />
+    <meta name="keywords"
+        content="istok szabolcs, istok, szabolcs, cv, resume, portfolio, umfst, informatika, flutter, java, c++" />
+    <meta name="author" content="Istok Szabolcs" />
+    <meta name="copyright" content="Copyright (c) 2026 by Istok Szabolcs" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Istók Szabolcs - CV / Portfólió" />
+    <meta property="og:description" content="Informatika hallgató és szoftverfejlesztő önéletrajza." />
+    <meta property="og:type" content="website" />
+
+    <title>Istók Szabolcs | CV | RESUME | PORTFOLIO</title>
+
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.jpg" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/text.css" />
+    <link rel="stylesheet" href="css/960_24_col.css" />
+    <link rel="stylesheet" href="css/sytles.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans+Narrow:400,700|PT+Sans:400,700" rel="stylesheet"
+        type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tips.js"></script>
+    <script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+    <script type="text/javascript" src="js/scroll-startstop.events.jquery.js"></script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKHSVGZN0V"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKHSVGZN0V');
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.progress_bar, .html, .php, .css, .flash, .java, .cms, .seo').each(function () {
+                var percent = $(this).attr('title');
+                $(this).animate({ width: percent }, 1000);
+            });
+
+            $('.tip').tipsy({ gravity: 's', fade: true });
+
+            $('#gallery a').lightBox();
+
+            $("#gallery img").fadeTo("fast", 0.8);
+            $("#gallery img").hover(function () {
+                $(this).fadeTo("fast", 1.0);
+            }, function () {
+                $(this).fadeTo("fast", 0.8);
+            });
+
+            var $elem = $('.container_24');
+            $('#nav_up').fadeIn('slow');
+            $('#nav_down').fadeIn('slow');
+
+            $(window).bind('scrollstart', function () {
+                $('#nav_up,#nav_down').stop().animate({ 'opacity': '0.2' });
+            });
+            $(window).bind('scrollstop', function () {
+                $('#nav_up,#nav_down').stop().animate({ 'opacity': '1' });
+            });
+
+            $('#nav_down').click(function () {
+                $('html, body').animate({ scrollTop: $elem.height() }, 800);
+            });
+            $('#nav_up').click(function () {
+                $('html, body').animate({ scrollTop: '0px' }, 800);
+            });
+
+            $('#contact-form-element').submit(function (e) {
+                e.preventDefault();
+                var form = $(this);
+                var status = $('#form-status-message');
+                status.html('<p style="color: #0073aa; margin-top: 10px;">Küldés folyamatban...</p>');
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'POST',
+                    data: form.serialize(),
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.success) {
+                            status.html('<p style="color: #2e7d32; font-weight: bold; margin-top: 10px;">Köszönöm! Az üzenetet sikeresen elküldtem.</p>');
+                            form.trigger("reset");
+                        } else {
+                            status.html('<p style="color: #d32f2f; font-weight: bold; margin-top: 10px;">Hiba történt a küldés során.</p>');
+                        }
+                    },
+                    error: function () {
+                        status.html('<p style="color: #d32f2f; font-weight: bold; margin-top: 10px;">Hálózati hiba történt a küldés során.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <ul class="social_panel">
+            <li><a href="https://github.com/istszabi" title="GitHub Profile" class="blue-darker"><img
+                        src="img/facebook.png" width="24" height="24" alt="GitHub Profile" /></a></li>
+            <li><a href="https://linkedin.com" title="LinkedIn Profile" class="blue-dark"><img src="img/linkedin.png"
+                        width="24" height="24" alt="LinkedIn Profile" /></a></li>
+        </ul>
+    </div>
+
+    <div class="container_24">
+
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+
+        <div class="grid_9">
+            <div id="name_tittle">
+                <h1>Istók Szabolcs</h1>
+                <ul>
+                    <li>Informatika Hallgató | UMFST Târgu Mureș</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid_3">
+            <div class="holder"></div>
+        </div>
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+
+        <div class="grid_7">
+            <div class="work_list">
+                <h1>ELÉRHERŐSÉG & CSATORNÁK:</h1>
+                <h3>SZOFTVERFEJLESZTÉS, MOBIL & WEB ALKALMAZÁSOK</h3>
+
+                <h2>GitHub Pages Domain</h2>
+                <ul>
+                    <li><a target="_blank" title="GitHub Domain"
+                            href="https://istszabi.github.io">istszabi.github.io</a></li>
+                </ul>
+
+                <h2>Önéletrajz</h2>
+                <ul>
+                    <li>
+                        <a target="_blank" title="Magyar CV" href="#">[HU]</a>
+                        <a target="_blank" title="English CV" href="#">[EN]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+
+        <div class="grid_10">
+            <div class="ribbon2">Personal Statement</div>
+            <img class="floatLeft" src="img/9481.jpg" alt="Profile Picture" />
+            <div class="item">
+                <p>
+                    Alkalmazott informatikát hallgatok a Marosvásárhelyi MOGYTTE (UMFST) egyetemen. Lényegretörő,
+                    analitikus gondolkodású fejlesztő vagyok, aki könnyen alkalmazkodik az új technológiákhoz és
+                    szigorúan tartja a határidőket.
+                </p>
+            </div>
+
+            <div class="ribbon2">Összegzés</div>
+            <div class="item">
+                <p>Tapasztalatom van szoftverarchitektúrák tervezésében, mobil és webes felületek fejlesztésében,
+                    valamint hálózati és rendszerközeli programozásban.</p>
+            </div>
+
+            <div class="grid_10">
+                <div class="why_me">
+                    <ul>
+                        <li>Mobil & Webfejlesztés (Flutter, Dart, HTML/CSS)</li>
+                        <li>Szoftverfejlesztés (Java, C, C++)</li>
+                        <li>Rendszerprogramozás & Linux hálózati eszközök (Nmap, Git)</li>
+                        <li>REST API integrációk & Cloud Functions (Firebase)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid_10"><br /><br /></div>
+            <div class="item">
+                <p><b>Készségek</b>: Java » C/C++ » Flutter & Dart » HTML5/CSS3 » Git » Linux / Terminal » Firebase »
+                    Zenei produkció & DJing</p>
+            </div>
+
+            <div class="ribbon2">Tanulmányok</div>
+            <div class="item_tittle">
+                <h1><a target="_blank" href="https://umfst.ro">UMFST G.E. Palade Târgu Mureș</a><span>2023 - 2026</span>
+                </h1>
+                <h2>Informatika alapképzés (BSc) | Marosvásárhely</h2>
+                <div class="item">
+                    <p><b>Informatikus diploma</b> | Folyamatban</p>
+                </div>
+            </div>
+
+            <div class="grid_10">
+                <div class="ribbon2">Nyelvtudás</div>
+                <div class="why_me">
+                    <ul>
+                        <li><b>Magyar</b> (Anyanyelv)</li>
+                        <li><b>Román</b> (Felsőfok / Tárgyalási szint)</li>
+                        <li><b>Angol</b> (Középfok / Szakmai)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid_10">
+                <div class="ribbon2">Érdeklődési körök</div>
+                <div class="why_me">
+                    <ul>
+                        <li>Zenei produkció, DJing és audio plugin keverés (FL Studio, Rekordbox)</li>
+                        <li>Szimulátorok és taktikai játékok (Assetto Corsa, Arma 3, Rainbow Six Siege)</li>
+                        <li>Kiberbiztonsági alapok és hálózati elemzések</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_2">
+            <div class="vertical_line"></div>
+        </div>
+
+        <div class="grid_10">
+            <div class="ribbon2">Technikai készségek</div>
+            <div id="technical_skill">
+                <div id="skill_list2">
+                    <ul>
+                        <li>Java</li>
+                        <li>Flutter / Dart</li>
+                        <li>C / C++</li>
+                        <li>HTML / CSS</li>
+                        <li>Git / Linux</li>
+                        <li>Firebase</li>
+                        <li>SQL / JSON</li>
+                        <li>API / REST</li>
+                    </ul>
+                </div>
+                <div id="skill_set">
+                    <ul>
+                        <li>
+                            <div class="progress_container">
+                                <div class="java tip" title="85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="html tip" title="80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="seo tip" title="75%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="css tip" title="85%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="progress_bar tip" title="80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="php tip" title="70%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="flash tip" title="75%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress_container">
+                                <div class="cms tip" title="80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ribbon2">Projektek & Tapasztalat</div>
+
+            <div class="item_tittle">
+                <h1>Flutter Időjárás Webapp <span>2026</span></h1>
+                <h2>Flutter Web, Firebase Cloud Functions & OpenWeather API</h2>
+            </div>
+            <div class="item">
+                <p>Helyalapú időjárás-előrejelző webes alkalmazás Node.js backend funkciókkal és dinamikus felülettel.
+                </p>
+            </div>
+
+            <div class="item_tittle">
+                <h1>Bus Manager Asztali Alkalmazás <span>2025</span></h1>
+                <h2>Java, Swing UI, JSON</h2>
+            </div>
+            <div class="item">
+                <p>Buszjárat- és útvonalkezelő GUI rendszer menetrendek és adatok strukturált feldolgozására.</p>
+            </div>
+
+            <div class="item_tittle">
+                <h1>ReccoBeats API Integráció <span>2025</span></h1>
+                <h2>Java REST API Client</h2>
+            </div>
+            <div class="item">
+                <p>Zeneszámok tempóját és ajánlásait lekérdező integrációs modul külső webes API-khoz.</p>
+            </div>
+        </div>
+
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+
+        <div class="grid_22">
+            <div class="ribbon_portfolio">Projektek & Galéria</div>
+        </div>
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+
+        <div class="grid_24">
+            <div id="gallery">
+                <ul>
+                    <li>
+                        <a href="img/resume.png" title="Önéletrajz áttekintés">
+                            <img src="img/resume.png" width="100" height="100" alt="Önéletrajz" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="img/darkdenim3.png" title="Projekt hátterek">
+                            <img src="img/darkdenim3.png" width="100" height="100" alt="Projekt" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid_24">
+            <div class="horisontal_line"></div>
+        </div>
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+
+        <div class="grid_10">
+            <div class="ribbon2">Miért érdemes velem dolgozni?</div>
+            <div class="why_me">
+                <ul>
+                    <li>Rendszerszemléletű és precíz feladatmegoldás</li>
+                    <li>Képesség az önálló és csapatban való hatékony munkavégzésre</li>
+                    <li>Elkötelezettség a tiszta kód és a jó architektúra mellett</li>
+                    <li>Határidők és specifikációk pontos betartása</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid_2">
+            <div class="vertical_line2"></div>
+        </div>
+
+        <div class="grid_10">
+            <div class="ribbon2">Kapcsolat</div>
+
+            <div id="contact-area">
+                <form id="contact-form-element" action="https://formsubmit.co/ajax/istszabi@gmail.com" method="POST">
+                    <input type="hidden" name="_autoresponse"
+                        value="Köszönöm megkeresésedet! Az üzenetedet sikeresen megkaptam, hamarosan válaszolok." />
+                    <input type="hidden" name="_subject" value="Új üzenet a GitHub CV oldalról!" />
+
+                    <p>
+                        <label for="Name">Név / Name:</label>
+                        <input type="text" name="name" id="Name" required="required" placeholder="Teljes neved" />
+                    </p>
+                    <p>
+                        <label for="Email">E-mail cím / Email:</label>
+                        <input type="email" name="email" id="Email" required="required"
+                            placeholder="email@domain.com" />
+                    </p>
+                    <p>
+                        <label for="Message">Üzenet / Message:</label><br />
+                        <textarea name="message" rows="10" cols="20" id="Message" required="required"
+                            placeholder="Írd ide az üzeneted..."></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" name="submit" value="Küldés / Submit" class="submit-button" />
+                    </p>
+                </form>
+                <div id="form-status-message"></div>
+            </div>
+
+            <div class="item_tittle">
+                <h2>Közösségi Profilok</h2>
+            </div>
+
+            [ <a target="_blank" href="https://github.com/istszabi">GitHub</a> ]
+            [ <a target="_blank" href="https://www.facebook.com/szabolcs.istok/">Facebook</a> ]
+
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="grid_1">
+            <div class="holder"></div>
+        </div>
+        <div class="grid_24">
+            <div class="horisontal_line"></div>
+        </div>
+
+    </div>
+
+    <div style="display:none;" class="nav_up" id="nav_up"></div>
+    <div style="display:none;" class="nav_down" id="nav_down"></div>
+</body>
+
+</html>
